@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Mẹ Việt Nam Anh Hùng</string>
+    <string name="title_activity_maps">Bản đồ</string>
+    <string name="title_addnew_activity">Thêm địa điểm</string>
+    <string name="title_list_location_activity">Địa điểm gần đây</string>
+    <string name="title_show_direction_activity">Đường đi</string>
+    <string name="title_detail_activity">Chi tiết địa điểm</string>
+
+
+    <string name="btnNearbyPlaces">Địa điểm gần đây</string>
+    <string name="btnLogIn">Đăng nhập</string>
+    <string name="btnCity">Tỉnh / Thành</string>
+    <string name="btnDistrict">Quận / Huyện</string>
+    <string name="btnTakeAvatar">+ Ảnh đại diện</string>
+    <string name="btnRelative">+ Ảnh liên quan</string>
+    <string name="btnCancel">Hủy</string>
+    <string name="btnDetails">Chi tiết</string>
+
+
+    <string name="str_login">Đăng nhập</string>
+    <string name="str_current_position">Vị trí hiện tại</string>
+    <string name="str_username">Tên đăng nhập</string>
+    <string name="str_password">Mật khẩu</string>
+    <string name="str_visit">Mẹ Việt Nam Anh Hùng</string>
+
+    <string name="msg_sorry_no_internet">Không có kết nối Internet</string>
+    <string name="msg_connection_time_out_please_try_again">Hết phiên làm việc</string>
+    <string name="msg_sorry_an_has_occurred">Có lỗi xảy ra</string>
+    <string name="msg_need_location_permission">Yêu cầu cung cấp quyền truy cập Vị trí</string>
+    <string name="msg_permission_denied">Yêu cầu cấp quyền bị từ chối</string>
+    <string name="msg_request_permission">Ứng dụng cần cấp quyền truy cập Vị trí để các chức năng có thể hoạt động ổn định nhất</string>
+    <string name="msg_null_location">Không thể lấy vị trí hiện tại của bạn, vui lòng thử lại</string>
+
+
+    <string name="search_title">Tìm kiếm</string>
+
+    <string name="msg_empty_username">Bạn chưa nhập tài khoản</string>
+    <string name="msg_empty_password">Bạn chưa nhập mật khẩu</string>
+    <string name="msg_incorrect_login">Tài khoản hoặc mật khẩu không chính xác</string>
+    <string name="msg_gps_network_not_enabled">GPS chưa được bật</string>
+    <string name="msg_not_select_location">Bạn chưa chọn vị trí</string>
+    <string name="msg_cannot_upload">Không thể thêm vị trí vào lúc này. Vui lòng thử lại</string>
+    <string name="msg_empty_ogr_name">Bạn chưa nhập tên đơn vị</string>
+    <string name="msg_empty_phone_num">Bạn chưa nhập số điện thoại</string>
+    <string name="msg_empty_district">Bạn chưa chọn tỉnh / thành và quận / huyện</string>
+    <string name="msg_empty_avatar">Bạn chưa chọn hình đại diện</string>
+    <string name="msg_empty_location">Bạn chưa chọn vị trí</string>
+    <string name="msg_not_grant_permisson">Những quyền sau chưa được cấp</string>
+    <string name="msg_need_permission">Những quyền sau cần được cấp để ứng dụng có thể hoạt động. Vui lòng chấp nhận.</string>
+    <string name="msg_insert_succesful">Vị trí của bạn được thêm thành công</string>
+    <string name="msg_logout">Bạn chắc chắn muốn đăng xuất ?</string>
+    <string name="msg_confirm_exit">Bấm Back lần nữa để thoát ứng dụng</string>
+
+    <string name="open_location_settings">Đi đến cài đặt vị trí</string>
+
+    <string name="lbl_organization">Tổ chức</string>
+    <string name="lbl_contact_information">Liên hệ</string>
+    <string name="lbl_area">Khu vực</string>
+    <string name="lbl_image">Hình ảnh</string>
+    <string name="lbl_introduction">Giới thiệu</string>
+    <string name="lbl_update_direction">Cập nhật đường đi</string>
+
+    <string name="hint_organization">Nhập tên tổ chức</string>
+    <string name="hint_phone_number">Nhập số điện thoại</string>
+    <string name="featured_image">image</string>
+
+
+</resources>

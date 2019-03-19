@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context="com.example.toant.googlemap.activities.MainActivity">
+
+    <include
+        android:id="@+id/tToolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/toolbar" />
+
+    <fragment
+        android:layout_below="@+id/tToolbar"
+        android:id="@+id/mapHome"
+        android:layout_above="@id/llNeaby"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.toant.googlemap.activities.MapsActivity" />
+
+    <RelativeLayout
+        android:id="@+id/llNeaby"
+        android:background="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:text="@string/btnNearbyPlaces"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/btnNearbyPlaces"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>
