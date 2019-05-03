@@ -32,6 +32,10 @@ import java.util.zip.GZIPOutputStream;
 
 public class Utils implements Constants{
 
+
+
+    private static final String DIRECTION_API  = "AIzaSyAmITju60o8HgOrCT61z0qlyz9Dqc1alhQ";
+
     private static final String TAG = Utils.class.getSimpleName();
     public static int PROCESS = 0;
 
@@ -60,7 +64,7 @@ public class Utils implements Constants{
         googleDirectionsUrl.append("origin="+latitude+","+longitude);
         googleDirectionsUrl.append("&destination="+end_latitude+","+end_longitude);
 //        googleDirectionsUrl.append("sensor=false");
-//        googleDirectionsUrl.append("&key="+context.getString(R.string.google_maps_key));
+        googleDirectionsUrl.append("&key="+DIRECTION_API);
         return googleDirectionsUrl.toString();
     }
 

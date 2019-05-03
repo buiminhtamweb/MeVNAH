@@ -22,6 +22,6 @@
     -->
 
     <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDZXE1LmHmVPaXoHPGh6bRGAkw5oiDsVY0</string>-->
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCRA1v7oEpEfVPw1p3DCqgZw69KIwiGqOA</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAmITju60o8HgOrCT61z0qlyz9Dqc1alhQ</string>
     <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBx9MzGhJVNgWQ5u9smGwrF8tmtDlCeWAo</string>-->
 </resources>

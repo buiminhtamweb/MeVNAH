@@ -579,7 +579,8 @@ public class AddNewActivity extends BaseActivity implements View.OnTouchListener
             photoListArray.add(name);
 
             //Fix
-            File sourceFile = bitmapConvertToFile(AddNewActivity.this, bitmapAvatar);
+            Bitmap bitmap = ((BitmapDrawable) imgAddAvt.getDrawable()).getBitmap();
+            File sourceFile = bitmapConvertToFile(AddNewActivity.this, bitmap);
             NetworkProcessor.UploadImage(this, sourceFile, ID_API_INSERT_IMAGE, this);
         }
 

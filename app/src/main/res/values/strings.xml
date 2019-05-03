@@ -62,7 +62,8 @@
 
     <string name="hint_organization">Nhập tên tổ chức</string>
     <string name="hint_phone_number">Nhập số điện thoại</string>
-    <string name="featured_image">image</string>
+    <string name="featured_image">Hình ảnh</string>
+    <string name="leku_title_activity_location_picker">Chọn địa điểm</string>
 
 
 </resources>

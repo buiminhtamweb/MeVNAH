@@ -181,7 +181,7 @@ public class ShowDirectionActivity extends BaseMapActivity {
 //                customView.setText("Your centered text");
                 getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
                 getSupportActionBar().setCustomView(R.layout.actionbar_custom_title_view_centered);
-                TextView textView = getSupportActionBar().getCustomView().findViewById(R.id.cusotmTitle);
+//                TextView textView = getSupportActionBar().getCustomView().findViewById(R.id.cusotmTitle);
                 getSupportActionBar().getCustomView().findViewById(R.id.btnBack).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -189,9 +189,9 @@ public class ShowDirectionActivity extends BaseMapActivity {
                     }
                 });
                 try {
-                    textView.setText(timeKm.getRows().get(0).elements.get(0).distance.text +" - "+timeKm.getRows().get(0).elements.get(0).duration.text);
+//                    textView.setText(timeKm.getRows().get(0).elements.get(0).distance.text +" - "+timeKm.getRows().get(0).elements.get(0).duration.text);
                 }catch (Exception e){
-                    textView.setText("Không xác định");
+//                    textView.setText("Không xác định");
                 }
 //                tvTime.setText(timeKm.getRows().get(0).elements.get(0).distance.text +" - "+timeKm.getRows().get(0).elements.get(0).duration.text);
             }
