@@ -8,14 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import com.example.toant.googlemap.R;
 import com.example.toant.googlemap.utils.AdapterCallback;
 import com.example.toant.googlemap.utils.Constants;
 import com.squareup.picasso.Picasso;
 
-import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 
 /**
@@ -80,7 +78,7 @@ public class ImageDetailAdapter extends  RecyclerView.Adapter<RecyclerView.ViewH
 
         private void setData(String string){
             Log.e("Img Detail: ", "setData: " + string );
-            Picasso.with(context).load("http://admin.mevietnamanhhung.vn/uploads/_thumbs/images/service/"+string)
+            Picasso.get().load("http://admin.mevietnamanhhung.vn/uploads/_thumbs/images/service/" + string)
                     .fit().centerCrop()
                     .error(R.drawable.ic_copyright_symbol).into(imgLocation);
         }

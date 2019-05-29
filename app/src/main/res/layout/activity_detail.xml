@@ -51,6 +51,7 @@
         android:id="@+id/llDetail"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,16 +62,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
                 android:background="@color/colorWhite"
-                android:padding="@dimen/size12"
+                android:padding="8dp"
                 android:scaleType="fitCenter"
                 android:src="@mipmap/ic_launcher_round" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:src="@color/grey" />
 
             <TextView
                 android:id="@+id/tvLocationName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/padding12"
-                android:text="@string/app_name"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Tên mẹ Việt Nam Anh Hùng"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:src="@color/grey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding12"
+                android:padding="8dp"
+                android:text="Địa chỉ: "
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
@@ -78,23 +103,39 @@
                 android:id="@+id/tvLocationAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/padding12"
-                android:text="@string/app_name" />
+                android:padding="8dp"
+                android:text="Tọa độ GPS:" />
 
             <TextView
                 android:id="@+id/tvLocationCity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/padding12"
-                android:padding="@dimen/padding12"
-                android:text="@string/app_name"
-                android:textColor="#1f84e9" />
+                android:padding="8dp"
+                android:text="Địa chỉ: "
+                android:textColor="@color/colorPrimaryDark" />
+
+            <Button
+                android:id="@+id/btn_chi_duong"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="4dp"
+                android:text="Chỉ đường đến đây"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:theme="@style/CustomButton" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:src="@color/grey" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/padding12"
-                android:padding="@dimen/padding12"
+                android:padding="8dp"
                 android:text="Ghi chú: "
                 android:textColor="@color/black"
                 android:textStyle="bold" />
@@ -103,13 +144,19 @@
                 android:id="@+id/tvLocationIntroduction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/padding12"
-                android:text="@string/app_name" />
+                android:padding="8dp"
+                android:text="Nội dung ghi chú" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:src="@color/grey" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/padding12"
+                android:padding="8dp"
                 android:text="Hình ảnh: "
                 android:textColor="@color/black"
                 android:textStyle="bold" />

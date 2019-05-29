@@ -3,9 +3,8 @@ package com.example.toant.googlemap.activities;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
-import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,22 +12,17 @@ import android.text.Html;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.daimajia.slider.library.Animations.DescriptionAnimation;
-import com.daimajia.slider.library.SliderLayout;
-import com.daimajia.slider.library.SliderTypes.BaseSliderView;
-import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.example.toant.googlemap.R;
 import com.example.toant.googlemap.adapters.ImageDetailAdapter;
 import com.example.toant.googlemap.adapters.ImageSliderAdapter;
 import com.example.toant.googlemap.models.CityDistrict;
-import com.example.toant.googlemap.models.ImageSlider;
 import com.example.toant.googlemap.models.MapLocation;
 import com.example.toant.googlemap.utils.NetworkProcessor;
 import com.example.toant.googlemap.utils.Utils;
@@ -37,10 +31,7 @@ import com.squareup.picasso.Picasso;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class DetailActivity extends BaseActivity {
 
@@ -53,6 +44,7 @@ public class DetailActivity extends BaseActivity {
     private ImageButton btnCloseImage;
     private ScrollView llDetail;
     private ImageView imageView;
+    private Button mBtnChiDuong;
     private int currentPage = 0;
     private int NUM_PAGES = 0;
 
@@ -64,7 +56,7 @@ public class DetailActivity extends BaseActivity {
 
     @Override
     public void initUI() {
-        Log.e(TAG, "initUI: " );
+        Log.e(TAG, "initUI: ");
         showHomeButton();
         setUpContent();
 
@@ -112,6 +104,17 @@ public class DetailActivity extends BaseActivity {
         tvLocationCity = findViewById(R.id.tvLocationCity);
         flViewImage = findViewById(R.id.flViewImage);
         btnCloseImage = findViewById(R.id.btnCloseImage);
+        mBtnChiDuong = findViewById(R.id.btn_chi_duong);
+        /// Mở Gmaps để chỉ đường
+        mBtnChiDuong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri gmmIntentUri = Uri.parse("google.navigation:q=" + detailLocation.getLatitudeLocation() + ",+" + detailLocation.getLongitudeLocation());
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+            }
+        });
         llDetail = findViewById(R.id.llDetail);
         indicator = (CirclePageIndicator) findViewById(R.id.indicator);
         viewPagerSliderImage = (ViewPager) findViewById(R.id.viewPagerSliderImage);
@@ -124,7 +127,7 @@ public class DetailActivity extends BaseActivity {
             detailLocation = new Gson().fromJson(json, MapLocation.class);
 
             //Avatar
-            Picasso.with(this).load("http://admin.mevietnamanhhung.vn/uploads/images/service/" + detailLocation.getPhotoLocation())
+            Picasso.get().load("http://admin.mevietnamanhhung.vn/uploads/images/service/" + detailLocation.getPhotoLocation())
                     .fit().centerCrop()
                     .placeholder(R.drawable.ic_copyright_symbol)
                     .error(R.drawable.ic_copyright_symbol).into(imageView);
@@ -165,17 +168,17 @@ public class DetailActivity extends BaseActivity {
     public void adpaterCallback(Object data, int processId, int position) {
         if (processId == EVENT_CLICK) {
 
-            initImageSlider(viewPagerSliderImage,indicator, getBaseContext(),listLinkImage );
+            initImageSlider(viewPagerSliderImage, indicator, getBaseContext(), listLinkImage);
             viewPagerSliderImage.setCurrentItem(position, true);
             flViewImage.setVisibility(View.VISIBLE);
             llDetail.setVisibility(View.GONE);
         }
     }
 
-    private void initImageSlider(ViewPager viewPager,CirclePageIndicator indicator, Context mContext, List<String> listUrl){
+    private void initImageSlider(ViewPager viewPager, CirclePageIndicator indicator, Context mContext, List<String> listUrl) {
 
         //Set the pager with an adapter
-        viewPager.setAdapter(new ImageSliderAdapter(mContext,listUrl));
+        viewPager.setAdapter(new ImageSliderAdapter(mContext, listUrl));
 
         indicator.setViewPager(viewPager);
 
@@ -184,7 +187,7 @@ public class DetailActivity extends BaseActivity {
         //Set circle indicator radius
         indicator.setRadius(5 * density);
 
-        NUM_PAGES =listUrl.size();
+        NUM_PAGES = listUrl.size();
 
 
         // Auto start of viewpager

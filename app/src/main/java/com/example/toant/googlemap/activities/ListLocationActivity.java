@@ -1,28 +1,18 @@
 package com.example.toant.googlemap.activities;
 
 import android.annotation.SuppressLint;
-import android.app.SearchManager;
-import android.content.Context;
 import android.content.Intent;
-import android.location.Location;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.support.v7.widget.SearchView;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 
 import com.example.toant.googlemap.R;
 import com.example.toant.googlemap.adapters.LocationAdapter;
@@ -39,10 +29,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 
 
@@ -149,7 +136,13 @@ public class ListLocationActivity extends BaseActivity implements AdapterView.On
                 markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
                 arrayList.add(currentMarker);
                 arrayList.add(markerOptions);
-                Intent intent = new Intent(this,ShowDirectionActivity.class);
+//                Intent intent = new Intent(this,ShowDirectionActivity.class);
+//                intent.putExtra(LOCATION,arrayList);
+//                intent.putExtra(DETAIL,new Gson().toJson(mapLocation));
+//                startActivity(intent);
+
+                //Intent sang chi tiết
+                Intent intent = new Intent(this, DetailActivity.class);
                 intent.putExtra(LOCATION,arrayList);
                 intent.putExtra(DETAIL,new Gson().toJson(mapLocation));
                 startActivity(intent);

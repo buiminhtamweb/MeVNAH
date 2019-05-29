@@ -1,8 +1,6 @@
 package com.example.toant.googlemap.adapters;
 
 import android.content.Context;
-import android.content.Intent;
-import android.support.annotation.ArrayRes;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -10,24 +8,15 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.toant.googlemap.R;
-import com.example.toant.googlemap.models.City;
-import com.example.toant.googlemap.models.District;
 import com.example.toant.googlemap.models.MapLocation;
 import com.example.toant.googlemap.models.Xa;
 import com.example.toant.googlemap.utils.AdapterCallback;
 import com.example.toant.googlemap.utils.Constants;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -134,7 +123,7 @@ public class LocationAdapter extends  RecyclerView.Adapter<RecyclerView.ViewHold
             tvName.setText(mapLocation.getTenLocation());
             tvAddress.setText(Html.fromHtml(mapLocation.getDiaChiLocation()));
             tvLatng.setText("Latitude: " + mapLocation.getLatitudeLocation() + ", Longtitude: " + mapLocation.getLongitudeLocation());
-            Picasso.with(context).load("http://admin.mevietnamanhhung.vn/uploads/_thumbs/images/service/"+mapLocation.getPhotoLocation())
+            Picasso.get().load("http://admin.mevietnamanhhung.vn/uploads/_thumbs/images/service/" + mapLocation.getPhotoLocation())
                     .placeholder(R.drawable.ic_copyright_symbol)
                     .error(R.drawable.ic_copyright_symbol).into(imgLocation);
         }
